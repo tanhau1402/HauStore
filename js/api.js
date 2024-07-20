@@ -18,3 +18,19 @@ function deleted(url,id) {
       })
       .catch(error => console.error('Lỗi khi cập nhật đơn hàng', error));
 }
+
+function add(url,object) {
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(object),
+    })
+      .then(response => response.json())
+      .then(data => {
+        // After successful creation, refresh the post list
+        fetchPosts();
+      })
+      .catch(error => console.error('Error creating post:', error));
+  }

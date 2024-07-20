@@ -1,6 +1,9 @@
-const fileInput = document.getElementById('fileInput');
-const imageContainer = document.getElementById('image-container');
 
+const fileInput = document.getElementById('input-file-category');
+const imageContainer = document.getElementById('image-container');
+console.log(imageContainer);
+const storage = firebase.storage();
+let imgPath ;
 getAll(urlCategories, displayCategories);
 let idCategory ;
 
@@ -30,17 +33,53 @@ function deletedCategory () {
     deleted(urlCategories,idCategory);
 }
 
+document.getElementById("addCategory").addEventListener("submit", (e) => {
+e.preventDefault();
+if(!e.target.checkValidity()) {
+  console.log("validate error");
+  return
+}
+var logo = document.getElementById("img-category").src;
+var name = document.getElementById("name").value;
+var brand = document.getElementById("brand").value;
+
+   var category = {
+    logo: logo,
+    name:  name,
+    brand: brand
+   }
+   add(urlCategories,category);
+   uploadImage();
+});
 
 fileInput.addEventListener('change', function() {
+  var img = document.getElementById("img-category")
     const file = this.files[0];
     if (file) {
         const reader = new FileReader();
         reader.onload = function(event) {
-            const img = document.createElement('img');
             img.src = event.target.result;
-            imageContainer.innerHTML = '';
             imageContainer.appendChild(img);
         };
         reader.readAsDataURL(file);
     }
 });
+
+
+function uploadImage() {
+  const file = document.getElementById("input-file-category").files[0];
+  if (file) {
+    imgPath = "images/" + file.name;
+    const storageRef = storage.ref(imgPath);
+    const uploadTask = storageRef.put(file);
+
+    uploadTask.on("state_changed", function () {
+      // Thẻ hiển thị hoàn thành upload thành công
+      uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+        console.log("Upload successful!");
+      });
+    });
+  } else {
+    console.log("No file selected");
+  }
+}
