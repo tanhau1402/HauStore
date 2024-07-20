@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p,hr {
+    margin: 0;
+}
+.hidden {
+    display: none !important;
+}
+img {
+    width: 120px ; 
+    height: 100px;
+}
+
+.admin {
+
+    .left {
+        color: white;
+        background-color: maroon;
+        padding:0 15px;
+        .left-header {
+            height: 70px;
+            border-bottom: 1px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            .icon-1 {
+                padding: 20px;
+            }
+            .icon {
+                position: absolute;
+                background-color: black;
+                top:50%;
+                border-radius: 50px;
+                z-index: 10;
+            }
+        }
+        .content {
+            display: flex;
+            padding: 10px 0;
+            p {
+                margin-left: 30px;
+            }
+        }
+    }
+    .left-main {
+        .content {
+            .icon-2 {
+                font-size: 20px !important;
+                padding: 20px;
+            }
+        }
+    }
+    .right {
+
+        width: 100%;
+        .navbar {
+            .nav-icon {
+                .icon-3 {
+                    font-size: 20px;
+                    padding: 15px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .product-action {
+            display:  flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+        }
+        .box {
+            display: none;
+            
+        }
+    }
+}
+.modal {
+    .modal-1 {
+        .modal-footer {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+
+}
+  /* mobile */
+ @media screen and (max-width: 767px) {
+    .admin {
+        .left {
+            .left-header {
+                 .icon {
+                    right: 0;
+                    transform: translateY(-50%);
+                 }
+            }
+            .left-main {
+                display: none;
+            }
+        }
+        .right {
+            .navbar {
+                margin-top: 10px;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) {
+    .admin {
+        display: flex;
+        .left {
+            height: 100vh;
+            .left-header {
+                .icon {
+                   right: -15px;
+                   transform: translate(50%, -50%);
+                }
+           }
+
+        }
+        .right {
+            .product-action {
+                .btn-add {
+                    text-align: end;
+                }
+            }
+        }
+    }
+}

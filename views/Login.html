@@ -17,13 +17,46 @@
             crossorigin="anonymous"
         />
     </head>
-
+    <style>
+        .container {
+           height: 100vh;
+        }
+   </style>
     <body>
-       
-
-<h1>vsfbvsdb</h1>
-
-
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="card w-50">
+              <div class="card-header text-center">Login</div>
+              <div class="card-body">
+                <form class="form-login" id="form-login">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                    />
+            
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="password"
+                    />
+                  </div>
+                 
+                  <button type="submit" id="btn-login" class="btn btn-primary">Login</button>
+                </form>
+              </div>
+            </div>
+          </div>
+       <script src="../js/login.js"></script>
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
