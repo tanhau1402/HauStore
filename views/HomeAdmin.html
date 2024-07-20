@@ -151,56 +151,55 @@
   <!-- modal xac nhan xoa -->
   <div class="modal modal-1" id="modalDelete" tabindex="-1">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Confirm modal</h5>
-          <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h1 class="text-center">Are u sure ?</h1>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button onclick="deletedCategory()" type="button" class="btn btn-danger">Delete</button>
+      <form action="">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirm modal</h5>
+            <button type="button" class="btn-close"  data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1 class="text-center">Are u sure ?</h1>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button onclick="deletedCategory()" type="button" class="btn btn-danger">Delete</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- modal them moi -->
-  <div class="modal modal-add modal-lg" id="modalAdd" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="text-center text-success">ADD CATEGORY</h3>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3 w-50">
-            <label for="fileInput" class="form-label">Logo Category</label>
-            <input class="form-control mb-3" type="file" id="fileInput" >
-            <div id="image-container">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png" alt="">
+    <!-- modal them moi -->
+    <div class="modal modal-add modal-lg" id="modalAdd" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="text-center text-success">ADD CATEGORY</h3>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3 w-50">
+              <label for="fileInput" class="form-label">Logo Category</label>
+              <input class="form-control mb-3" type="file" id="fileInput" >
+              <div id="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png" alt="">
+              </div>
             </div>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input class="form-control" placeholder="Enter category name" type="text" id="name">
+            </div>
+            <div class="mb-3">    
+              <label for="brand" class="form-label">Brand</label>
+              <input class="form-control" placeholder="Enter  brand" type="text" id="brand">
+            </div>
+            
           </div>
-          <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input class="form-control" placeholder="Enter category name" type="text" id="name">
-          </div>
-          <div class="mb-3">    
-            <label for="address" class="form-label">Address</label>
-            <input class="form-control" placeholder="Enter  address" type="text" id="address">
-          </div>
-          <div class="mb-3">
-            <label for="phone" class="form-label">Phone</label>
-            <input class="form-control" placeholder="Enter phone number" type="number" id="phone">
+          <div class="modal-footer">
+            <button type="reset" value="reset" class="btn btn-warning">Reset</button>
+  
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button onclick="addCategory()" type="button" class="btn btn-success">Add</button>
           </div>
         </div>
-        <div class="modal-footer">
-          <button type="reset" value="reset" class="btn btn-warning" data-bs-dismiss="modal">Reset</button>
-
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button onclick="addCategory()" type="button" class="btn btn-success">Add</button>
-        </div>
-      </div>
+      </form>
     </div>
   </div>
    <script src="../js/api.js"></script>
