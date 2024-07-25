@@ -1,13 +1,14 @@
+const storage = firebase.storage();
 
 const fileInput = document.getElementById('input-file-category');
 const imageContainer = document.getElementById('image-container');
 console.log(imageContainer);
-const storage = firebase.storage();
-let imgPath ;
+
 getAll(urlCategories, displayCategories);
 let idCategory ;
-
+let categories ;
 function displayCategories (data) {
+       categories = data ;
     data.forEach((element) => {
         table_content.innerHTML += `
         <tr>
@@ -16,7 +17,7 @@ function displayCategories (data) {
         <td>${element.name}</td>
         <td>${element.brand}</td>
         <td>
-          <button  class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
+          <button data-bs-toggle="modal" onclick="editById(${element.id})"  data-bs-target="#modalAdd"  class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
           <button onclick="deletedById(${element.id})"  data-bs-toggle="modal" data-bs-target="#modalDelete" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
         </td>
       </tr>
@@ -33,23 +34,27 @@ function deletedCategory () {
     deleted(urlCategories,idCategory);
 }
 
-document.getElementById("addCategory").addEventListener("submit", (e) => {
+document.getElementById("addCategory").addEventListener("submit", async (e) => {
 e.preventDefault();
 if(!e.target.checkValidity()) {
   console.log("validate error");
   return
 }
-var logo = document.getElementById("img-category").src;
+
 var name = document.getElementById("name").value;
 var brand = document.getElementById("brand").value;
-
+ var imgPath = await uploadImage();
    var category = {
-    logo: logo,
+    logo: imgPath,
     name:  name,
     brand: brand
    }
-   add(urlCategories,category);
-   uploadImage();
+   if(idCategory) {
+      edit(urlCategories,idCategory,category);
+   }else {
+     add(urlCategories,category);
+   }
+
 });
 
 fileInput.addEventListener('change', function() {
@@ -65,21 +70,62 @@ fileInput.addEventListener('change', function() {
     }
 });
 
+function editById(id) {
+   idCategory = id ;
+  var newCategory = categories.find(element => element.id == id);
+  console.log(newCategory);
+  var name = document.getElementById("name");
+  name.value = newCategory.name ;
+  var brand = document.getElementById("brand");
+  brand.value = newCategory.brand ;
+  var imgPath = document.getElementById("img-category");
+  imgPath.src = newCategory.logo;
+  var title = document.getElementById("title-add");
+  title.innerText = "EDIT CATEGORY";
+  var buttonAdd = document.getElementById("button-add");
+  buttonAdd.innerText = "Update";
+
+}
+
+document.getElementById("add-Category").addEventListener( "click", () => {
+    idCategory = null ;
+    document.getElementById("addCategory").reset();
+    var imgPath = document.getElementById("img-category");
+    imgPath.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png";
+    var title = document.getElementById("title-add");
+  title.innerText = "ADD CATEGORY";
+  var buttonAdd = document.getElementById("button-add");
+  buttonAdd.innerText = "Add";
+
+})
+
+
+
+
 
 function uploadImage() {
-  const file = document.getElementById("input-file-category").files[0];
-  if (file) {
-    imgPath = "images/" + file.name;
-    const storageRef = storage.ref(imgPath);
-    const uploadTask = storageRef.put(file);
-
-    uploadTask.on("state_changed", function () {
-      // Thẻ hiển thị hoàn thành upload thành công
-      uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-        console.log("Upload successful!");
+  return new Promise((resolve, rejects) => {
+    const file = document.getElementById("input-file-category").files[0];
+    if (file) {
+      const imgPath = "images/" + file.name;
+      const storageRef = storage.ref(imgPath);
+      const uploadTask = storageRef.put(file);
+  
+      uploadTask.on("state_changed",
+    //   function (snapshot) {
+    //     // Quan sát trạng thái upload (progress, pause, resume)
+    //     const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    //     document.getElementById('status').innerText = 'Upload is ' + progress + '% done';
+    //  }, 
+      function () {
+        // Thẻ hiển thị hoàn thành upload thành công
+        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+            resolve(downloadURL);
+        });
       });
-    });
-  } else {
-    console.log("No file selected");
-  }
+    } else {
+      console.log("No file selected");
+    }
+  })
+  
 }

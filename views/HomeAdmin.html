@@ -28,30 +28,29 @@
         </div>
       </div>
       <div class="left-main">
-        <div class="content">
-          <span><i class="icon-2 fa-solid fa-layer-group"></i></span>
+        <div class="content justify-content-center">
+          <i class="icon-2 fa-solid fa-layer-group"></i>
           <p class="hidden">Categories</p>
         </div>
-        <div class="content">
-          <span><i class="icon-2 fa-brands fa-product-hunt"></i></span>
+        <div class="content justify-content-center">
+          <i class="icon-2 fa-brands fa-product-hunt"></i>
           <p class="hidden">Products</p>
         </div>
-        <div class="content">
-          <span><i class="icon-2 fa-solid fa-cart-shopping"></i></span>
+        <div class="content justify-content-center">
+          <i class="icon-2 fa-solid fa-cart-shopping"></i>
           <p class="hidden">Orders</p>
         </div>
-        <div class="content">
-          <span><i class="icon-2 fa-solid fa-users"></i></span>
+        <div class="content justify-content-center">
+          <i class="icon-2 fa-solid fa-users"></i>
           <p class="hidden">Customers</p>
         </div>
-        <div class="content">
-          <span><i class="icon-2 fa-solid fa-address-card"></i></span>
+        <div class="content justify-content-center">
+          <i class="icon-2 fa-solid fa-address-card"></i>
           <p class="hidden">Profile</p>
         </div>
       </div>
     </div>
     <div class="right">
-      <div class="row">
         <div class="col-md-12-col-lg-12 -col-12">
           <nav class="navbar navbar-expand navbar-light bg-light">
             <div class="collapse navbar-collapse" id="navbarText">
@@ -72,7 +71,7 @@
                </div>
           </nav>
         </div>
-      </div>
+    
       <div class="box">
         Dashboard
       </div>
@@ -89,7 +88,7 @@
               </div>          
             </div>
             <div class=" btn-add col-md-4 col-lg-4 col-12 mt-3">
-              <button type="button" data-bs-toggle="modal" data-bs-target="#modalAdd" class="btn btn-success">Add Categories</button>
+              <button type="button" data-bs-toggle="modal" data-bs-target="#modalAdd" id="add-Category" class="btn btn-success">Add Categories</button>
             </div>
             <table class="table text-center mt-5">
               <thead>
@@ -151,7 +150,7 @@
         <div class="modal-content">
         <form id="addCategory" class="needs-validation" novalidate>
           <div class="modal-header">
-            <h3 class="text-center text-success">ADD CATEGORY</h3>
+            <h3 id="title-add" class="text-center text-success">ADD CATEGORY</h3>
           </div>
           <div class="modal-body">
             <div class="mb-3 w-50">
@@ -164,7 +163,7 @@
                 Please choose a logo.
               </div>
               <div id="image-container">
-                <img id="img-category" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png" alt="">
+                <img id="img-category" src="" alt="">
               </div>
             </div>
             <div class="mb-3">
@@ -193,7 +192,7 @@
             <button type="reset" value="reset" class="btn btn-warning">Reset</button>
   
             <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button  type="submit" class="btn btn-success">Add</button>
+            <button  type="submit" id="button-add" class="btn btn-success">Add</button>
           </div>
         </form>
         </div>
@@ -219,6 +218,7 @@
         </div>
       </div>
     </div>
+    <script src="../js/validation.js"></script>
     <!-- Firebase App (the core Firebase SDK) -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <!-- Firebase Storage -->
@@ -234,7 +234,7 @@
 
    <script src="../js/api.js"></script>
    <script src="../js/firebaseconfig.js"></script>
-   <script src="../js/validation.js"></script>
+  
    <script src="../js/getCategories.js"></script>
   <script src="/js/homeAdmin.js"></script>
 

@@ -34,3 +34,17 @@ function add(url,object) {
       })
       .catch(error => console.error('Error creating post:', error));
   }
+  function edit(url,id,object) {
+    fetch(`${url}/${id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(object),
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('san pham đã được cập nhật', data);
+      })
+      .catch(error => console.error('Lỗi khi cập nhật đơn hàng', error));
+}
