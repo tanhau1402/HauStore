@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    &:hover {
+        color: #ba6838;
+    }
+}
 
 image {
     width: 100%;
@@ -132,4 +140,35 @@ main {
             
         }
     }
+    .collection-2 {
+        .title-2-2 {
+            font-size: 25px;
+            background-color: #ba6838;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+        .collection-content {
+            display: flex !important;
+            justify-content: center !important;
+            .card {
+                
+                margin: 10px;
+                background-color:antiquewhite;
+                .card-img-top {
+                   
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
+footer {
+    .social {
+        a {
+            margin-left: 10px;
+        }
+    }
+    
+    
 }

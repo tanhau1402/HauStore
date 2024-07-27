@@ -30,7 +30,6 @@ function add(url,object) {
       .then(response => response.json())
       .then(data => {
         // After successful creation, refresh the post list
-        fetchPosts();
       })
       .catch(error => console.error('Error creating post:', error));
   }

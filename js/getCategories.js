@@ -3,6 +3,8 @@ const storage = firebase.storage();
 const fileInput = document.getElementById('input-file-category');
 const imageContainer = document.getElementById('image-container');
 console.log(imageContainer);
+const fileInputProduct = document.getElementById('input-file-product');
+const imgProductContainer = document.getElementById('image-container-product');
 
 getAll(urlCategories, displayCategories);
 let idCategory ;
@@ -69,6 +71,18 @@ fileInput.addEventListener('change', function() {
         reader.readAsDataURL(file);
     }
 });
+fileInputProduct.addEventListener('change', function() {
+  var img = document.getElementById("img-product")
+    const file = this.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+            img.src = event.target.result;
+            imgProductContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    }
+});
 
 function editById(id) {
    idCategory = id ;
@@ -96,7 +110,6 @@ document.getElementById("add-Category").addEventListener( "click", () => {
   title.innerText = "ADD CATEGORY";
   var buttonAdd = document.getElementById("button-add");
   buttonAdd.innerText = "Add";
-
 })
 
 
