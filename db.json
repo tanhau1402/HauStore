@@ -7,34 +7,58 @@
       "id": 1
     },
     {
-      "id": 2,
-      "logo": "https://vn4u.vn/wp-content/uploads/2023/09/logo-co-tinh-nhat-quan-2.png",
-      "name": "Pepsi",
-      "brand": "Pepsi"
-    },
-    {
       "id": 3,
       "logo": "https://vn4u.vn/wp-content/uploads/2023/09/logo-co-tinh-nhat-quan-2.png",
       "name": "Pepsi",
       "brand": "Pepsi"
     },
     {
-      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449682384_1000915818091704_7647293429352229460_n.jpg?alt=media&token=6b4cd033-d3cf-400f-8343-954b79cc3184",
-      "name": "Name Product Update1",
-      "brand": "apple1",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=db4b8921-b8d3-45c7-b63e-72ff3502aa16",
+      "name": "iPhone 11 64GB I Chính hãng",
+      "brand": "SamSung1",
       "id": 4
     },
     {
-      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=5799d4bb-904b-4400-b521-33ca06f47824",
-      "name": "Pepsi",
-      "brand": "Pepsi",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fa.jpeg?alt=media&token=238d240c-925b-4de0-a8e3-d016c6e74113",
+      "name": "Name Product Update",
+      "brand": "111",
       "id": 5
     },
     {
-      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=92606a26-6938-4351-bdf4-5ea1f61c5372",
-      "name": "Name Product Update",
-      "brand": "Pepsi",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=e2f2e9fc-d480-4de2-a4a4-a358231b5cc8",
+      "name": "Name Product Update1",
+      "brand": "222",
       "id": 6
+    }
+  ],
+  "products": [
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449682384_1000915818091704_7647293429352229460_n.jpg?alt=media&token=6b4cd033-d3cf-400f-8343-954b79cc3184",
+      "name": "333333",
+      "price": "3",
+      "categoryProduct": "3",
+      "id": 1
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449685321_1179764486400269_5125967366034618417_n.jpg?alt=media&token=e32226e5-1060-497a-8f8f-ae8527933c9d",
+      "name": "hello2",
+      "price": "1",
+      "categoryProduct": "",
+      "id": 2
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fa.jpeg?alt=media&token=84031a99-6172-47e5-9059-b9f1c8817182",
+      "name": "hello2",
+      "price": "123",
+      "categoryProduct": "3",
+      "id": 3
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449685321_1179764486400269_5125967366034618417_n.jpg?alt=media&token=e32226e5-1060-497a-8f8f-ae8527933c9d",
+      "name": "333333",
+      "price": "7",
+      "categoryProduct": "6",
+      "id": 4
     }
   ]
 }

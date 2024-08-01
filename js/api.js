@@ -1,4 +1,5 @@
 const urlCategories = "http://localhost:3000/categories";
+const urlProducts = "http://localhost:3000/products";
 
 async function getAll(url, callback) {
     try{

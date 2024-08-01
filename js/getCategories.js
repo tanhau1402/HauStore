@@ -2,9 +2,8 @@ const storage = firebase.storage();
 
 const fileInput = document.getElementById('input-file-category');
 const imageContainer = document.getElementById('image-container');
-console.log(imageContainer);
-const fileInputProduct = document.getElementById('input-file-product');
-const imgProductContainer = document.getElementById('image-container-product');
+ var tableProductContent = document.getElementById("table-content-products");
+
 
 getAll(urlCategories, displayCategories);
 let idCategory ;
@@ -45,7 +44,7 @@ if(!e.target.checkValidity()) {
 
 var name = document.getElementById("name").value;
 var brand = document.getElementById("brand").value;
- var imgPath = await uploadImage();
+ var imgPath = await uploadImage("input-file-category");
    var category = {
     logo: imgPath,
     name:  name,
@@ -59,30 +58,9 @@ var brand = document.getElementById("brand").value;
 
 });
 
-fileInput.addEventListener('change', function() {
-  var img = document.getElementById("img-category")
-    const file = this.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            img.src = event.target.result;
-            imageContainer.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-    }
-});
-fileInputProduct.addEventListener('change', function() {
-  var img = document.getElementById("img-product")
-    const file = this.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(event) {
-            img.src = event.target.result;
-            imgProductContainer.appendChild(img);
-        };
-        reader.readAsDataURL(file);
-    }
-});
+
+inputFile(fileInput,imageContainer);
+uploadImage(fileInput);
 
 function editById(id) {
    idCategory = id ;
@@ -116,29 +94,3 @@ document.getElementById("add-Category").addEventListener( "click", () => {
 
 
 
-function uploadImage() {
-  return new Promise((resolve, rejects) => {
-    const file = document.getElementById("input-file-category").files[0];
-    if (file) {
-      const imgPath = "images/" + file.name;
-      const storageRef = storage.ref(imgPath);
-      const uploadTask = storageRef.put(file);
-  
-      uploadTask.on("state_changed",
-    //   function (snapshot) {
-    //     // Quan sát trạng thái upload (progress, pause, resume)
-    //     const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-    //     document.getElementById('status').innerText = 'Upload is ' + progress + '% done';
-    //  }, 
-      function () {
-        // Thẻ hiển thị hoàn thành upload thành công
-        uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-            resolve(downloadURL);
-        });
-      });
-    } else {
-      console.log("No file selected");
-    }
-  })
-  
-}
