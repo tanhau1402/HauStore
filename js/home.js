@@ -53,7 +53,7 @@ function productDetail(id) {
 
   var productContain = document.getElementById("product-info-new");
   console.log(productContain);
-  product.forEach((element) => {
+  product.forEach(element => {
     productContain.innerHTML += `
             
     <!-- <div class="main-right p-3 col-12 col-lg-5 col-md-5">

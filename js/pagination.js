@@ -24,7 +24,6 @@ const  items = [
     }
 ]
 
-console.log("vvfvx")
 
 function displayPagination(data,current) {
     // Calculate start and end index of items to display on current page
