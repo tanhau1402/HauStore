@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    .img-head {
+
+        img {
+            width: 100%;
+
+        }
+    }
+
+}
+
+main {
+    .title-main {
+        display: flex;
+        align-items: center;
+        height: 100px;
+        background-color: green;
+        color: white;
+    }
+
+    .main-bottom {
+        .main-left {
+            border: 1px solid gray;
+
+            h5 {
+                background-color: green;
+                font-weight: lighter;
+                padding: 10px;
+                color: white;
+            }
+
+            .tt1 {
+                font-weight: lighter;
+            }
+
+            ul {
+
+
+                li { 
+                    &:hover {
+                        animation: hoa 2s ease;
+                    }          
+                }
+            }
+
+
+        }
+
+
+    }
+
+    .main-right {
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+
+            .filter {
+                display: flex;
+            }
+        }
+
+        .list-book {
+            .card {
+                .card-title {
+                    font-weight: bold;
+                }
+
+                .card-text {
+                    color: green;
+                }
+            }
+        }
+    }
+}
+
+@keyframes hoa {
+    from {
+        color: aquamarine;
+        transform: translateX(0%);
+      }
+      to {
+        color: blue;
+        transform: translateX(50%);
+      }
+}

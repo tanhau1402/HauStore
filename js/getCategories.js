@@ -1,16 +1,35 @@
 const storage = firebase.storage();
 
 const fileInput = document.getElementById('input-file-category');
-const imageContainer = document.getElementById('image-container');
- var tableProductContent = document.getElementById("table-content-products");
+const imageContainer = document.getElementById('img-category');
+ var table_content =  document.getElementById("table-content");
+var  nameSearch;
 
-
-getAll(urlCategories, displayCategories);
+getAll(urlCategories, getAllCategories);
 let idCategory ;
-let categories ;
-function displayCategories (data) {
-       categories = data ;
-    data.forEach((element) => {
+
+ function getAllCategories(data) {
+  items[0].data = data ;
+  displayCategories(data);
+  var optionCategories = document.getElementById("inputCategory");
+  items[0].data.forEach((element) => {
+    optionCategories.innerHTML += `<option value="${element.id}">${element.name} ${element.brand} </option>`;
+  });
+ }
+
+function displayCategories(data) {
+
+   table_content.innerHTML = "";
+   let dataFilter;
+   if (nameSearch) {
+    dataFilter = items[0].data.filter(category => category.name.toLowerCase().includes(nameSearch));
+   }else {
+    dataFilter = data;
+   }
+   const dataPage = displayPagination(dataFilter,items[0].currentPage);
+
+   displayPaginationControls(dataFilter,items[0]);
+    dataPage.forEach((element) => {
         table_content.innerHTML += `
         <tr>
         <th scope="row">${element.id}</th>
@@ -58,14 +77,22 @@ var brand = document.getElementById("brand").value;
 
 });
 
+//  inputFile(fileInput,imageContainer);
+  fileInput.addEventListener("change", function (e) {
 
-inputFile(fileInput,imageContainer);
-uploadImage(fileInput);
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {         
+          imageContainer.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
 
 function editById(id) {
    idCategory = id ;
-  var newCategory = categories.find(element => element.id == id);
-  console.log(newCategory);
+  var newCategory = items[0].data.find(element => element.id == id);
   var name = document.getElementById("name");
   name.value = newCategory.name ;
   var brand = document.getElementById("brand");
@@ -89,8 +116,7 @@ document.getElementById("add-Category").addEventListener( "click", () => {
   var buttonAdd = document.getElementById("button-add");
   buttonAdd.innerText = "Add";
 })
-
-
+ 
 
 
 

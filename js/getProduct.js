@@ -1,22 +1,39 @@
-const fileInput1 = document.getElementById("input-file-product");
-const imgProductContainer = document.getElementById("image-product");
+// import { displayPaginationControls,displayPagination } from '../js/pagination' ;
+var tableProductContent = document.getElementById("table-content-products");
+const fileInputProduct = document.getElementById("input-file-product");
+const imgProductContainer = document.getElementById("img-product");
+var nameSearch;
 
-inputFile(fileInput1,imgProductContainer);
-uploadImage(fileInput1);
+function getNameCategories(id) {
+  
+     const category =  items[0].data.find(element => element.id == id);
+     return category ? category.name : "no";
+ }
+// inputFile(fileInputProduct,imgProductContainer);
+function inputFile(fileInputProduct, imgProductContainer) {
+  fileInputProduct.addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        document.getElementById(imgProductContainer).src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+}
+// uploadImage(fileInput1);
 
 document.getElementById("button-add-product").addEventListener("click", () => {
-  idProduct = null ;
+  idProduct = null;
   document.getElementById("addProduct").reset();
   var imgPath = document.getElementById("img-product");
-  imgPath.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png";
-  var optionCategories = document.getElementById("inputCategory");
-  categories.forEach((element) => {
-    optionCategories.innerHTML += `<option value="${element.id}">${element.name} ${element.brand} </option>`;
-  });
+  imgPath.src =
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1224px-NASA_logo.svg.png";
   var titleProduct = document.getElementById("title-add-product");
-  titleProduct.innerText = 'ADD PRODUCT';
-  var btnAddProduct = document.getElementById('btn-add-product');
-  btnAddProduct.innerText = 'Add';
+  titleProduct.innerText = "ADD PRODUCT";
+  var btnAddProduct = document.getElementById("btn-add-product");
+  btnAddProduct.innerText = "Add";
 });
 
 document.getElementById("addProduct").addEventListener("submit", async (e) => {
@@ -37,25 +54,51 @@ document.getElementById("addProduct").addEventListener("submit", async (e) => {
     price: price,
     categoryProduct: categoryProduct,
   };
-  
-  if(idProduct) {
-    edit(urlProducts,idProduct,product);
- }else {
-   add(urlProducts,product);
- }
+
+  if (idProduct) {
+    edit(urlProducts, idProduct, product);
+  } else {
+    add(urlProducts, product);
+  }
 });
-getAll(urlProducts, displayProduct);
-let idProduct ;
-let productsList ;
-function displayProduct (data) {
-       productsList = data ;
-    data.forEach((element) => {
-        tableProductContent.innerHTML += `
+getAll(urlProducts, getAllProducts);
+let idProduct;
+
+function getAllProducts(data) {
+  items[1].data = data;
+  displayProducts(data);
+}
+//  inputFile(fileInput,imageContainer);
+fileInputProduct.addEventListener("change", function (e) {
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      imgProductContainer.src = event.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+function displayProducts(data) {
+  tableProductContent.innerHTML = "";
+  let dataFilter;
+  if (nameSearch) {
+    dataFilter = items[1].data.filter((product) =>
+      product.name.toLowerCase().includes(nameSearch)
+    );
+  } else {
+    dataFilter = data;
+  }
+  const dataPage2 = displayPagination(dataFilter, items[1].currentPage);
+
+  displayPaginationControls(dataFilter, items[1]);
+  dataPage2.forEach((element) => {
+    tableProductContent.innerHTML += `
         <tr>
         <th scope="row">${element.id}</th>
         <td><img src="${element.img}   " style="width: 40px; height:40px ;" alt=""></td>
         <td>${element.name}</td>
-        <td>${element.categoryProduct}</td>
+        <td>${getNameCategories(element.categoryProduct)}</td>
         <td>${element.price}</td>
         <td>
           <button data-bs-toggle="modal" onclick="editByIdProduct(${element.id})"  data-bs-target="#modalAddProduct1"  class="btn btn-primary"><i class="fa-solid fa-pen-to-square"></i></button>
@@ -63,34 +106,33 @@ function displayProduct (data) {
         </td>
       </tr>
       
-        `
-    });
+        `;
+  });
 }
+
 function deleteById(id) {
   idProduct = id;
-  
 }
 
 function deleteProduct() {
-   deleted(urlProducts,idProduct);
+  deleted(urlProducts, idProduct);
 }
 function editByIdProduct(id) {
-  idProduct = id ;
- var newProduct = productsList.find(element => element.id == id);
- 
- var name = document.getElementById("name-product");
- name.value = newProduct.name ;
- var imgPath = document.getElementById("img-product");
- imgPath.src = newProduct.img;
- var categoryP = document.getElementById("inputCategory");
- categoryP.value = newProduct.categoryProduct;
- var price = document.getElementById('price-product')
- price.value = newProduct.price;
- var titleProduct = document.getElementById("title-add-product");
+  idProduct = id;
+  var newProduct = items[1].data.find((element) => element.id == id);
 
- titleProduct.innerText = "EDIT PRODUCT";
- var btnAddProduct = document.getElementById('btn-add-product');
+  var name = document.getElementById("name-product");
+  name.value = newProduct.name;
+  var imgPath = document.getElementById("img-product");
+  imgPath.src = newProduct.img;
+  var categoryP = document.getElementById("inputCategory");
+  categoryP.value = newProduct.categoryProduct;
+  var price = document.getElementById("price-product");
+  price.value = newProduct.price;
+  var titleProduct = document.getElementById("title-add-product");
 
- btnAddProduct.innerText = "Update";
+  titleProduct.innerText = "EDIT PRODUCT";
+  var btnAddProduct = document.getElementById("btn-add-product");
 
+  btnAddProduct.innerText = "Update";
 }

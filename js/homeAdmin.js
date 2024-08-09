@@ -2,7 +2,6 @@ var icon = document.querySelector(".icon");
 var p = Array.from(document.getElementsByTagName("p"));
 var leftMain = document.querySelector(".left-main");
 var list = document.querySelectorAll(".content");
-var table_content =  document.getElementById("table-content");
 
 
 

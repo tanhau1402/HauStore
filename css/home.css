@@ -3,19 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 a {
     list-style: none;
     text-decoration: none;
     color: black;
+
     &:hover {
         color: #ba6838;
     }
 }
 
-image {
+img {
     width: 100%;
     height: 100%;
 }
+
+
 
 header {
     .navbar-top {
@@ -31,6 +35,7 @@ header {
         p {
             font-weight: bold;
             font-size: 13px;
+
             &:hover {
                 color: #ba6838;
             }
@@ -54,24 +59,71 @@ header {
         }
     }
 
-    .navbar-bottom {
-        li {
-            padding: 10px;
-
-            &:hover {
-                background-color: #fff3cd;
-                border-radius: 10px;
-            }
-
+    .nav-bottom {
+        .nb1 {
+            
+            width: 100%;
+            border: 1px solid black;
             a {
-                font-weight: bold;
+                
+
+
+                &:hover {
+
+                    color: green;
+                    background-color: #ba6838;
+                   
+                }
             }
+
         }
+
+
+
     }
+
+    .text1 {
+        background-color: #ba6838;
+        /* p {
+        margin-bottom: 0px;
+        padding: 10px;
+        animation: rightThenLeft infinite ;
+        animation-duration: 15s;
+       animation-timing-function:linear;
+        } */
+    
+        
+}
+
+    
+
+
+
+    .carousel-indicators {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .button-btn {
+            height: 90px;
+            width: 220px;
+        }
+        
+    
+
+    }
+    .carousel-indicators [data-bs-target] {
+        text-indent: 0;
+    }
+
 }
 
 main {
     .best-seller {
+        .listSeller {
+            height: 650px;
+            overflow-y: auto;
+        }
+
         .title-1 {
             padding: 10px;
 
@@ -120,26 +172,33 @@ main {
                 }
             }
         }
+
         .collection-right {
             .products {
                 display: flex !important;
-                justify-content: space-around !important;
-                align-items: center !important;
+                justify-content: start !important;
+                align-items: start !important;
+
+                .price {
+                    color: green;
+                }
             }
+
             .button-group {
                 button {
                     border-color: #ba6838 !important;
                     color: #ba6838;
-    
+
                     &:hover {
                         background-color: #fff3cd;
                         color: white;
                     }
                 }
             }
-            
+
         }
     }
+
     .collection-2 {
         .title-2-2 {
             font-size: 25px;
@@ -148,27 +207,128 @@ main {
             border-radius: 10px;
             color: white;
         }
+
         .collection-content {
-            display: flex !important;
-            justify-content: center !important;
+
             .card {
-                
-                margin: 10px;
-                background-color:antiquewhite;
-                .card-img-top {
-                   
-                    border-radius: 5px;
+               
+                padding: 10px;
+                .card-title {
+                    height: 50px;
+                }
+
+                .button-group {                 
+                    .btn {
+                        padding: 5px !important;
+                        width: 80px;
+                    }
+                    
+
+                }
+
+
+                .img-fluid {
+                    &:hover {
+                        animation: zoomImg;
+                        animation-duration: 1s;
+                        animation-delay: 0s;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 3px 3px gainsboro;
+                }
+
+
+
+                .card-price {
+                    color: green;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: bold;
+
                 }
             }
+
         }
     }
 }
+
 footer {
     .social {
         a {
             margin-left: 10px;
         }
     }
-    
-    
+
+
 }
+
+@keyframes zoomImg {
+    from {
+        scale: 1;
+    }
+
+    to {
+        scale: 1.2;
+    }
+}
+
+
+
+@keyframes rightThenLeft {
+    from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+      to {
+        transform: translateX(-90%);
+      }
+}
+/* Use a media query to add a breakpoint at 768px: */
+@media screen and (max-width: 768px) {
+    main {
+        .collection-2 {
+            .collection-content {
+                .card-title, .card-text , .card-price ,.button-group {
+                    display: none;
+                }
+            }
+        }
+        .collection {
+            .collection-right {
+                .button-group {
+                    display: flex;
+                    justify-content: center;
+                }
+        
+            }
+        }
+        
+    }
+    header { 
+        .carousel-indicators {
+            .button-btn {
+                width: 100px;
+                height: 50px;
+                font-size: 10px;
+            }
+        }
+        
+    }
+  }
+  @media  screen and (max-width: 1200px) {
+    main {
+        .listSeller {
+            display:  flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    
+  }
+ 

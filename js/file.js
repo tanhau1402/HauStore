@@ -1,16 +1,16 @@
-function inputFile(fileInput,imgContainer) {
-    fileInput.addEventListener("change", function (e) {
+// function inputFile(fileInputImg,imgContainer) {
+//     fileInputImg.addEventListener("change", function (e) {
  
-        const file = e.target.files[0];
-        if (file) {
-          const reader = new FileReader();
-          reader.onload = function (event) {
-            document.getElementById(imgContainer).src = event.target.result;
-          };
-          reader.readAsDataURL(file);
-        }
-      });
-}
+//         const file = e.target.files[0];
+//         if (file) {
+//           const reader = new FileReader();
+//           reader.onload = function (event) {
+//             document.getElementById(imgContainer).src = event.target.result;
+//           };
+//           reader.readAsDataURL(file);
+//         }
+//       });
+// }
 function uploadImage(inputFile) {
     return new Promise((resolve, rejects) => {
       const file = document.getElementById(inputFile).files[0];

@@ -1,321 +1,410 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="../css/home.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <body>
-        <header>
-            <nav class="navbar navbar-top navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <form class="d-flex col-12 col-md-4 col-lg-4">
-                        <input class="input-search form-control me-2" type="search" placeholder="Bạn tìm gì hôm nay ?" aria-label="Search">
-                    </form>
-                    <div class="logo col-12 col-md-4 col-lg-4 text-center">
-                        <img src="https://file.hstatic.net/200000863047/file/logo_nau_43e5331b983c463ea49137b2728fa4d1.png" style="width: 100px; height: 80px;" alt="">
-                    </div>
-                    <div class="nav-item col-12 col-md-4 col-lg-4 d-flex justify-content-end">
-                        <div class="login text-center">
-                            <i class="fa-regular fa-user"></i>
-                        <p>Đăng nhập</p>
-                        </div>
-                        <div class="buy ms-4 text-center">
-                            <i class="fa-solid fa-cart-shopping"></i>
-                        <p>Giỏ hàng</p>
-                        </div>
-                    </div>
-                </div>
-              </nav>
-              <div class="nav-bottom ">
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-12">
-                        <nav class="navbar  navbar-bottom navbar-expand-lg ">
-                            <div class="container-fluid">
-                              <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Trang chủ
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                          <li><a class="dropdown-item" href="#">Action</a></li>
-                                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                      </li>
-                                      <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                          Sản phẩm
-                                        </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                          <li><a class="dropdown-item" href="#">Action</a></li>
-                                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                        </ul>
-                                      </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link" href="#">Giới thiệu</a>
-                                  </li>
-                                  
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
-                    </div>
-                </div>
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-top navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <form class="d-flex col-12 col-md-4 col-lg-4">
+          <input class="input-search form-control me-2" type="search" placeholder="Bạn tìm gì hôm nay ?"
+            aria-label="Search" />
+        </form>
+        <div class="logo col-12 col-md-4 col-lg-4 text-center">
+          <img src="https://file.hstatic.net/200000863047/file/logo_nau_43e5331b983c463ea49137b2728fa4d1.png"
+            style="width: 100px; height: 80px" alt="" />
+        </div>
+        <div class="nav-item col-12 col-md-4 col-lg-4 d-flex justify-content-end">
+         
+          <div class="buy text-center">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p>Giỏ hàng</p>
+          </div>
+          <div class="login text-center ms-4">
+            <i class="fa-regular fa-user"></i>
+            <p>Đăng nhập</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="text1 text-center">
+      <marquee behavior="" direction="">Chào mừng bạn đến với Đông A Books. Nếu bạn cần giúp đỡ hãy liên hệ với chúng tôi qua Hotline: 02839291285 hoặc Email: contact@sachdonga.vn</marquee>
+    </div>
+    <div class="nav-bottom">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-12">
+          <nav class="navbar nb1  navbar-expand-lg  ">
+            <div class="container justify-content-end">
+              <a class="navbar-brand visually-hidden" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class=" nav-main  collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav   ">
+                    <a class="nav-link all-content  " aria-current="page" href="#" >Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../views/box2.html">Tất cả sản phẩm</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Danh mục sản phẩm
+                    </a>
+                    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Sản phẩm bán chạy</a></li>
+                      <li><a class="dropdown-item" href="#">Sản phẩm giảm giá</a></li>
+                      <li><a class="dropdown-item" href="#">Sản phẩm giới hạn</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Thể loại sách
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">Văn học</a></li>
+                      <li><a class="dropdown-item" href="#">Văn học kinh điển</a></li>
+                      <li><a class="dropdown-item" href="#">Sefthelp</a></li>
+                      <li><a class="dropdown-item" href="#">Trinh thám</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hình thức thanh toán</a>
+                  </li>
+                  
+
+                </ul>
+                <!-- <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
               </div>
-              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://file.hstatic.net/200000863047/file/anh_bia_a5f40b8e309149e0bcb3d595d4966e45.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://file.hstatic.net/200000863047/file/anh_bia_a5f40b8e309149e0bcb3d595d4966e45.png" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://file.hstatic.net/200000863047/file/anh_bia_a5f40b8e309149e0bcb3d595d4966e45.png" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-        </header>
-        <main>
-            <div class="best-seller p-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-md-12 col-lg-7">
-                            <div class="picture-class p-1 ">
-                                <img  src="https://file.hstatic.net/200000863047/file/artboard_1_large_3b02033399c340728087267f75235d0b.png" class="img-fluid rounded-4" alt="...">
-                                <!-- <img class="rounded-4" style="width: 700px; height: 400px;" src="https://file.hstatic.net/200000863047/file/artboard_1_large_3b02033399c340728087267f75235d0b.png" alt=""> -->
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-12 col-lg-5 bg-body-tertiary rounded-4 p-2">
-                            <div class="title-1 ">
-                                <span class="title">Best-sellers</span>
-                                <hr>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-            <div class="collection p-5 bg-body-tertiary rounded-4">
-                <div class="container">
-                    <div class="row">
-                        <div class="title-2">
-                            <span class="title-2-2">Iphone Collection</span>
-                            <hr>
-                        </div>
-                        <div class="collection-left col-12 col-md-12 col-lg-3 p-2">
-                            
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-outline-secondary p-2">Tất cả sản phẩm</button>
-                                <button type="button" class="btn btn-outline-secondary mt-1  p-2">Sản phẩm nổi bật</button>
-                                <button type="button" class="btn btn-outline-secondary mt-1  p-2">Sản phẩm giảm giá</button>
-                            </div>
-                            <!-- <div class="img-box">
+          </nav>  
+        </div>
+      </div>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide-to="0" class="active button-btn" aria-current="true" aria-label="Slide 1">
+        VĂN HỌC KINH ĐIỂN
+        </button>
+        <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="button-btn" aria-label="Slide 2">
+          SÁCH MỚI ĐÔNG A
+        </button>
+        <button type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide-to="2" class="button-btn" aria-label="Slide 3">
+          SÁCH GIỚI HẠN
+        </button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/banner1.webp" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/banner2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/banner3.webp" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </header>
+  <main>
+   <div class="box">
+    <div class="best-seller p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-7">
+            <div class="picture-class bg-body-tertiary rounded-4 p-2">
+              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lnqnror327sdc6"
+                class="img-fluid rounded-4" alt="..." />
+              <!-- <img class="rounded-4" style="width: 700px; height: 400px;" src="https://file.hstatic.net/200000863047/file/artboard_1_large_3b02033399c340728087267f75235d0b.png" alt=""> -->
+            </div>
+          </div>
+          <div class="col-12 col-md-12 col-lg-5 bg-body-tertiary rounded-4">
+            <div class="title-1">
+              <span class="title">Best-sellers</span>
+              <hr />
+            </div>
+            <div class="listSeller">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection p-5 bg-body-tertiary container rounded-4">
+      <div class="container">
+        <div class="row">
+          <div class="title-2">
+            <span class="title-2-2"> Collection</span>
+            <hr />
+          </div>
+          <div class="collection-left col-12 col-md-12 col-lg-3 p-2">
+            <div class="d-grid gap-2">
+              <button type="button" class="btn btn-outline-secondary p-2">
+                Tất cả sản phẩm
+              </button>
+              <button type="button" class="btn btn-outline-secondary mt-1 p-2">
+                Sản phẩm nổi bật
+              </button>
+              <button type="button" class="btn btn-outline-secondary mt-1 p-2">
+                Sản phẩm giảm giá
+              </button>
+            </div>
+            <!-- <div class="img-box">
                                 <img class="d-block" src="https://my-live-01.slatic.net/p/23c3c421217b01a5c0515cd33cf3aca3.jpg" alt="">
                             </div> -->
-                        </div>
-                        <div class="collection-right col-12 col-md-12 col-lg-9 p-2">
-                            <div class="card mb-3" style="">
-                                <div class="row g-0">
-                                  <div class="col-md-4 p-4">
-                                    <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="img-fluid rounded-start" alt="...">
-                                  </div>
-                                  <div class=" products col-md-8 p-2">
-                                    <div class=" product-card card-body d-flex  flex-column align-items-center">
-                                      <h5 class="card-title">Iphone 15</h5>
-                                      <p class="text-center">Máy mới 100% , chính hãng Apple Việt Nam.
-                                        CellphoneS hiện là đại lý bán lẻ uỷ quyền iPhone chính hãng VN/A của Apple Việt Nam</p>
-                                      <div class="button-group mt-5">
-                                        <button type="button" class="btn btn-outline-secondary p-2">Thêm vào giỏ hàng</button>
-                                        <button type="button" class="btn btn-outline-secondary p-2 ms-3">Mua ngay</button>
-                                      </div>
-                                      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="collection-2 p-5 bg-body-tertiary rounded-4">
-              <div class="container">
-                  <div class="row ">
-                      <div class="title-2">
-                          <span class="title-2-2">Collection</span>
-                          <hr>
+          </div>
+          <div class="collection-right col-12 col-md-12 col-lg-9 p-2">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card mb-3" style="">
+                    <div class="row g-0">
+                      <div class="col-md-4 p-4">
+                        <img
+                          src="https://product.hstatic.net/1000328521/product/thiet_ke_chua_co_ten_8c54e0c4b01e447e82ee79b1515f3bfc_master.jpg"
+                          class="img-fluid rounded-start" alt="..." />
                       </div>
-                      
-                      <div class="collection-content ">
-                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 d-flex justify-content-center g-4">
-                          <div class="col">
-                            <div class="card  ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col">
-                            <div class="card ">
-                              <img src="https://onewaymobile.vn/images/products/2023/09/13/large/iphone-15-15_1694580102.webp" class="card-img-top" alt="...">
-                              <div class="card-body">
-                                <h5 class="card-title">Card title</h5>     
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <button type="button" class="btn btn-outline-secondary p-2 ">Mua ngay</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-            
-        </main>
-        <footer>
-          <div class="container">
-            <div class="col-12 mt-2 border-top  border-main py-3">
-              <div class="align-items-center d-flex flex-column mb-3 text-center">
-                <p class="mt-3">Kết nối với chúng tôi tại:</p>
-              </div>
-              <div class="d-flex justify-content-center position-relative social">
-                <a href="https://www.facebook.com" target="_blank" class="position-relative iso sitdown modal-open d-inline-block facebook mr-1" title="Facebook">
-                  <img class="lazy loaded" src="https://file.hstatic.net/200000785527/file/facebook_ce742afdcdea4026a633915bdfdce6f5.png" data-src="https://file.hstatic.net/200000785527/file/facebook_ce742afdcdea4026a633915bdfdce6f5.png" alt="facebook" width="32" height="32">
-                </a>
-                <a href="" target="_blank" class="position-relative iso sitdown modal-open d-inline-block twitter mr-1" title="Twitter">
-                  <img class="lazy loaded" src="https://file.hstatic.net/200000863047/file/logo_of_twitter.svg_0037c05f8cb046c88b4bb69c8a5e79d1.webp" data-src="" alt="twitter" width="32" height="32">
-                </a>
-                <a href="https://www.instagram.com" target="_blank" class="position-relative iso sitdown modal-open d-inline-block instagram mr-1" title="Instagram+">
-                  <img class="lazy loaded" src="https://file.hstatic.net/200000863047/file/instagram_icon_15809408771d495c8306342ab50be9a7.png" data-src="https://file.hstatic.net/200000863047/file/instagram_icon_15809408771d495c8306342ab50be9a7.png" alt="instagram" width="32" height="32">
-                </a>
-                <a href="" target="_blank" class="position-relative iso sitdown modal-open d-inline-block youtube mr-1" title="Youtube">
-                  <img class="lazy loaded" src="https://file.hstatic.net/200000863047/file/e-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png_60fcc2c951064c908490ad5e770b43c9.webp" data-src="https://file.hstatic.net/200000863047/file/e-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png_60fcc2c951064c908490ad5e770b43c9.webp" alt="youtube" width="32" height="32">
-                </a>
-                <a href="https://shopee.vn" target="_blank" class="position-relative iso sitdown modal-open d-inline-block shopee mr-1" title="Shopee">
-                  <img class="lazy loaded" src="https://file.hstatic.net/200000785527/file/shopee_efcb449798c24dd4a4a312f1ad9e3e8d.png" data-src="https://file.hstatic.net/200000785527/file/shopee_efcb449798c24dd4a4a312f1ad9e3e8d.png" alt="Shopee" width="32" height="32">
-                </a>
-                <a href="" target="_blank" class="position-relative iso sitdown modal-open d-inline-block lazada mr-1" title="Lazada">
-                  <img class="lazy loaded" src="https://file.hstatic.net/200000863047/file/1714299307tiktok-shop-icon-png_8f32a981d8734214b022395ce62dd05c.png" data-src="https://file.hstatic.net/200000863047/file/1714299307tiktok-shop-icon-png_8f32a981d8734214b022395ce62dd05c.png" alt="Lazada" width="32" height="32">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="foot-2">
-            <div class="container">
-              <div class="row  align-items-center">
-                <div class="col-12 text-center border-top border-main py-2">
-                  
-                  <div class="coppyright">Bản quyền thuộc về <a rel="nofollow noopener" href="https://www.facebook.com" title="MewTheme" target="_blank">MewTheme</a>. <a target="_blank" href="https://www.haravan.com/?utm_campaign=poweredby&amp;utm_medium=haravan&amp;utm_source=onlinestore">Powered by Haravan</a></div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+                      <div class="products col-md-8 p-2">
+                        <div class="product-card card-body">
+                          <h5 class="card-title">
+                            THỐNG KHỔ VÀ PHIÊU LINH (SỐ LƯỢNG CÓ HẠN)
+                          </h5>
+                          <p class="card-info">
+                            Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
+                            SP: 8936203363302 |
+                          </p>
+                          <h5 class="price">400.000đ</h5>
+                          <p class="card-subtitle">
+                            Thông tin sản phẩm <br />
+                            Thống khổ và phiêu linh <br />
+                            Tác giả: Irving Stone <br />
+                            Dịch giả: Nguyễn Minh <br />
+                            Số trang: 980 <br />
+                            Kích thước: 16 x 24 cm <br />
+                          </p>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+                          <div class="button-group mt-5">
+                            <button type="button" class="btn btn-outline-secondary p-2">
+                              Thêm vào giỏ hàng
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary p-2 ms-3">
+                              Mua ngay
+                            </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card mb-3" style="">
+                    <div class="row g-0">
+                      <div class="col-md-4 p-4">
+                        <img
+                          src="https://product.hstatic.net/1000328521/product/0_da_4a1c415bd3914ce99a1dee0de0be2de9_master.jpg"
+                          class="img-fluid rounded-start" alt="..." />
+                      </div>
+                      <div class="products col-md-8 p-2">
+                        <div class="product-card card-body">
+                          <h5 class="card-title">
+                            GIA ĐÌNH ROBONSON THỤY SĨ (BÌA VẢI)
+                          </h5>
+                          <p class="card-info">
+                            Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
+                            SP: 8936203364668 |
+                          </p>
+                          <h5 class="price">315,000₫</h5>
+                          <p class="card-subtitle">
+                            Thông tin ấn phẩm <br />
+                            Gia đình Robinson Thụy Sỹ <br />
+                            Tác giả: Johann David Wyss <br />
+                            Dịch giả: Nguyễn Minh <br />
+                            Kích thước: 13,5 x 20,5 cm <br />
+                            Số trang: 456 <br />
+                          </p>
+
+                          <div class="button-group mt-5">
+                            <button type="button" class="btn btn-outline-secondary p-2">
+                              Thêm vào giỏ hàng
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary p-2 ms-3">
+                              Mua ngay
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card mb-3" style="">
+                    <div class="row g-0">
+                      <div class="col-md-4 p-4">
+                        <img
+                          src="https://product.hstatic.net/1000328521/product/1_da_a844834097414bc1bd81c8a5a27b4034_master.jpg"
+                          class="img-fluid rounded-start" alt="..." />
+                      </div>
+                      <div class="products col-md-8 p-2">
+                        <div class="product-card card-body">
+                          <h5 class="card-title">
+                            TRÊN SA MẠC VÀ TRONG RỪNG THẲM (BÌA VẢI)
+                          </h5>
+                          <p class="card-info">
+                            Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
+                            SP: 8936203363302 |
+                          </p>
+                          <h5 class="price">378,000₫</h5>
+                          <p class="card-subtitle">
+                            Thông tin sản phẩm <br />
+                            Trên sa mạc và trong rừng thẳm <br />
+                            Tác giả: Henryk Sienkiewicz <br />
+                            Dịch giả: Nguyễn Hữu Dũng <br />
+                            Minh họa: Đức Lâm <br />
+                            Kích thước: 13,5 x 20,5 cm
+                          </p>
+
+                          <div class="button-group mt-5">
+                            <button type="button" class="btn btn-outline-secondary p-2">
+                              Thêm vào giỏ hàng
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary p-2 ms-3">
+                              Mua ngay
+                            </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="collection-2 p-5 bg-body-tertiary rounded-4 mt-5">
+      <div class="container" >
+        <div class="row">
+          <div class="title-2">
+            <span class="title-2-2">Collection</span>
+            <hr />
+          </div>
+          <div class="collection-content">
+            <div class="row listCollection row-cols-1 row-cols-md-2 row-cols-xl-4 ">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="col-12 mt-2 border-top border-main py-3">
+        <div class="align-items-center d-flex flex-column mb-3 text-center">
+          <p class="mt-3">Kết nối với chúng tôi tại:</p>
+        </div>
+        <div class="d-flex justify-content-center position-relative social">
+          <a href="https://www.facebook.com" target="_blank"
+            class="position-relative iso sitdown modal-open d-inline-block facebook mr-1" title="Facebook">
+            <img class="lazy loaded"
+              src="https://file.hstatic.net/200000785527/file/facebook_ce742afdcdea4026a633915bdfdce6f5.png"
+              data-src="https://file.hstatic.net/200000785527/file/facebook_ce742afdcdea4026a633915bdfdce6f5.png"
+              alt="facebook" width="32" height="32" />
+          </a>
+          <a href="" target="_blank" class="position-relative iso sitdown modal-open d-inline-block twitter mr-1"
+            title="Twitter">
+            <img class="lazy loaded"
+              src="https://file.hstatic.net/200000863047/file/logo_of_twitter.svg_0037c05f8cb046c88b4bb69c8a5e79d1.webp"
+              data-src="" alt="twitter" width="32" height="32" />
+          </a>
+          <a href="https://www.instagram.com" target="_blank"
+            class="position-relative iso sitdown modal-open d-inline-block instagram mr-1" title="Instagram+">
+            <img class="lazy loaded"
+              src="https://file.hstatic.net/200000863047/file/instagram_icon_15809408771d495c8306342ab50be9a7.png"
+              data-src="https://file.hstatic.net/200000863047/file/instagram_icon_15809408771d495c8306342ab50be9a7.png"
+              alt="instagram" width="32" height="32" />
+          </a>
+          <a href="" target="_blank" class="position-relative iso sitdown modal-open d-inline-block youtube mr-1"
+            title="Youtube">
+            <img class="lazy loaded"
+              src="https://file.hstatic.net/200000863047/file/e-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png_60fcc2c951064c908490ad5e770b43c9.webp"
+              data-src="https://file.hstatic.net/200000863047/file/e-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png_60fcc2c951064c908490ad5e770b43c9.webp"
+              alt="youtube" width="32" height="32" />
+          </a>
+          <a href="https://shopee.vn" target="_blank"
+            class="position-relative iso sitdown modal-open d-inline-block shopee mr-1" title="Shopee">
+            <img class="lazy loaded"
+              src="https://file.hstatic.net/200000785527/file/shopee_efcb449798c24dd4a4a312f1ad9e3e8d.png"
+              data-src="https://file.hstatic.net/200000785527/file/shopee_efcb449798c24dd4a4a312f1ad9e3e8d.png"
+              alt="Shopee" width="32" height="32" />
+          </a>
+          <a href="" target="_blank" class="position-relative iso sitdown modal-open d-inline-block lazada mr-1"
+            title="Lazada">
+            <img class="lazy loaded"
+              src="https://file.hstatic.net/200000863047/file/1714299307tiktok-shop-icon-png_8f32a981d8734214b022395ce62dd05c.png"
+              data-src="https://file.hstatic.net/200000863047/file/1714299307tiktok-shop-icon-png_8f32a981d8734214b022395ce62dd05c.png"
+              alt="Lazada" width="32" height="32" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-2">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 text-center border-top border-main py-2">
+            <div class="coppyright">
+              Bản quyền thuộc về
+              <a rel="nofollow noopener" href="https://www.facebook.com" title="MewTheme" target="_blank">MewTheme</a>.
+              <a target="_blank"
+                href="https://www.haravan.com/?utm_campaign=poweredby&amp;utm_medium=haravan&amp;utm_source=onlinestore">Powered
+                by Haravan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+    <script src="../js/api.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../js/home.js"></script>
+  </body>
+
+
 </html>

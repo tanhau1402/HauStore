@@ -1,64 +1,117 @@
 {
   "categories": [
     {
-      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=979fff70-370c-4f17-87f5-0ea571025084",
-      "name": "Samsung Galaxy A52s 5G",
-      "brand": "apple",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct1.webp?alt=media&token=63a1634e-90af-42d4-8065-359975a1f074",
+      "name": "Sách đặc biệt",
+      "brand": "Sách đặc biệt",
       "id": 1
     },
     {
-      "id": 3,
-      "logo": "https://vn4u.vn/wp-content/uploads/2023/09/logo-co-tinh-nhat-quan-2.png",
-      "name": "Pepsi",
-      "brand": "Pepsi"
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct3.webp?alt=media&token=93d7fff6-bc2e-4329-b08c-a40f05b79e38",
+      "name": "Sách văn học",
+      "brand": "Sách văn học",
+      "id": 3
     },
     {
-      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=db4b8921-b8d3-45c7-b63e-72ff3502aa16",
-      "name": "iPhone 11 64GB I Chính hãng",
-      "brand": "SamSung1",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct2.webp?alt=media&token=04f861ba-2342-48c6-b277-5ddaa2e4648a",
+      "name": "Sách trinh thám",
+      "brand": "Sách trinh thám",
       "id": 4
     },
     {
-      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fa.jpeg?alt=media&token=238d240c-925b-4de0-a8e3-d016c6e74113",
-      "name": "Name Product Update",
-      "brand": "111",
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct4.webp?alt=media&token=f05287d1-25d4-4da2-912f-c8b3b0ac2f8f",
+      "name": "Sách kỹ năng",
+      "brand": "Sách kỹ năng",
       "id": 5
+    },
+    {
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct5.webp?alt=media&token=a8252bb3-dd00-4ecd-951a-49c84ebd41e2",
+      "name": "Sách tiểu thuyết",
+      "brand": "Sách tiểu thuyết",
+      "id": 6
     },
     {
       "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F438221556_2052838911754398_6379447283637029668_n.jpg?alt=media&token=e2f2e9fc-d480-4de2-a4a4-a358231b5cc8",
       "name": "Name Product Update1",
       "brand": "222",
-      "id": 6
+      "id": 7
+    },
+    {
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fa.jpeg?alt=media&token=d0a0f692-e5b7-45f5-9303-d18cdc388c98",
+      "name": "Samsung Galaxy A52s 5G 2",
+      "brand": "SamSung1",
+      "id": 8
+    },
+    {
+      "logo": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F810C9768-2056-407E-9E60-5F9C2CC0CEC7-17703-00000F59E4416F3B_Original.jpg?alt=media&token=f0699b0f-57fd-401f-b5b6-7ef0646df4c1",
+      "name": "Apple Mac mini M1 256GB",
+      "brand": "SamSung",
+      "id": 9
     }
   ],
   "products": [
     {
-      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449682384_1000915818091704_7647293429352229460_n.jpg?alt=media&token=6b4cd033-d3cf-400f-8343-954b79cc3184",
-      "name": "333333",
-      "price": "3",
-      "categoryProduct": "3",
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct1.webp?alt=media&token=63a1634e-90af-42d4-8065-359975a1f074",
+      "name": "Trăm năm Nobel - Lịch sử La Mã - Tập II",
+      "price": "380.000",
+      "categoryProduct": "1",
       "id": 1
     },
     {
-      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449685321_1179764486400269_5125967366034618417_n.jpg?alt=media&token=e32226e5-1060-497a-8f8f-ae8527933c9d",
-      "name": "hello2",
-      "price": "1",
-      "categoryProduct": "",
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct2.webp?alt=media&token=98f6f259-0902-4709-93ec-8f96c62d7d4b",
+      "name": "365 chuyện kể mỗi ngày",
+      "price": "400.000",
+      "categoryProduct": "3",
       "id": 2
     },
     {
-      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fa.jpeg?alt=media&token=84031a99-6172-47e5-9059-b9f1c8817182",
-      "name": "hello2",
-      "price": "123",
-      "categoryProduct": "3",
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct3.webp?alt=media&token=53dfcb9b-4ba6-4bf2-b2ae-60831a848f0e",
+      "name": "Kỹ thuật vẽ sơn dầu",
+      "price": "300.000",
+      "categoryProduct": "5",
       "id": 3
     },
     {
-      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2F449685321_1179764486400269_5125967366034618417_n.jpg?alt=media&token=e32226e5-1060-497a-8f8f-ae8527933c9d",
-      "name": "333333",
-      "price": "7",
-      "categoryProduct": "6",
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct4.webp?alt=media&token=f05287d1-25d4-4da2-912f-c8b3b0ac2f8f",
+      "name": "Đây là Leonardo da Vinci",
+      "price": "500.000",
+      "categoryProduct": "1",
       "id": 4
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct5.webp?alt=media&token=a8252bb3-dd00-4ecd-951a-49c84ebd41e2",
+      "name": "Đây là Warhol",
+      "price": "200.000",
+      "categoryProduct": "4",
+      "id": 5
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct6.webp?alt=media&token=d8f0f90b-d41d-49b6-986f-e392bc6d923c",
+      "name": "Câu chuyện nghệ thuật",
+      "price": "370.000",
+      "categoryProduct": "3",
+      "id": 6
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct7.webp?alt=media&token=a11ebef4-dcc1-44e0-84fb-f04bf6a552c1",
+      "name": "Thiên tài",
+      "price": "400.000",
+      "categoryProduct": "5",
+      "id": 7
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct8.webp?alt=media&token=8622f6ea-22ff-488c-8c26-059ce6fef315",
+      "name": "abc",
+      "price": "100.000",
+      "categoryProduct": "3",
+      "id": 8
+    },
+    {
+      "img": "https://firebasestorage.googleapis.com/v0/b/haustore-2fc58.appspot.com/o/images%2Fproduct9.webp?alt=media&token=a0082465-0436-46a5-b4dc-55db25c8394c",
+      "name": "Truyện cổ Grimm",
+      "price": "300.000",
+      "categoryProduct": "3",
+      "id": 9
     }
   ]
 }

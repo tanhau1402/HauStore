@@ -1,0 +1,103 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+.img {
+    width: 100%;
+    height: 100%;
+}
+header {
+    .img-head {
+        
+        img {
+            width: 100%;
+           
+        }
+    }
+}
+main {
+    .title-product {
+      .title {
+        
+        height: 100px;
+       background-image:url(../img/hdt_banner_img.png);
+      }     
+    }
+    .product {
+        
+        .main-left {
+            .name {
+                font-weight: bold;
+            }
+            .price {
+                color: green;
+                font-size: 20px;
+            }
+            /* display: flex;
+            flex-direction: column;
+            justify-content: space-around; */
+            .button-group {
+                button {
+                    background-color: green !important;
+                    color: white;
+                    
+                }
+                
+            }
+        }
+    }
+    .main-bottom {
+      
+        .main-bottom-left {        
+            .button-head {
+                display: flex;
+                justify-content: start;
+                .btn {
+                    background-color: green;
+                    text-decoration: none;
+                    height: 35px;       
+                    border-radius: 0px;
+                    font-size: 15px;
+
+                    &:hover {
+                        background-color: greenyellow;
+                    }
+                }
+            }
+        }
+        .main-bottom-right {
+            background-color: grey;
+            border-radius: 20px;
+            .title {
+                color: white;
+                margin-top: 5px;
+                font-size: 20px;
+                font-weight:lighter;
+            }
+        }
+
+    }
+}
+footer {
+    margin-top: 25px !important;
+    .social {
+        a {
+            margin-left: 10px;
+        }
+    }
+
+
+}
+@media screen and (max-width: 1200px) { 
+ main {
+    padding: 20px;
+    .main-bottom {
+        .main-bottom-right {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+    }
+ }
+}
