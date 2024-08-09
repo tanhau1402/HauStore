@@ -52,6 +52,7 @@ function productDetail(id) {
   console.log(product);
 
   var productContain = document.getElementById("product-info-new");
+  console.log(productContain);
   product.forEach((element) => {
     productContain.innerHTML += `
             
