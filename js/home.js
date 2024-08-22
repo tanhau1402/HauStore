@@ -11,7 +11,6 @@ function getAllProducts(data) {
   
 }
 
-
  function getNameCategories(id) {
 
      const category =  items[0].data.find(element => element.id == id);
@@ -21,8 +20,7 @@ function displayProducts (data) {
     var bestSellerContainer = document.querySelector(".listSeller");
     
     data.forEach((element) => {
-      bestSellerContainer.innerHTML += `
-              
+      bestSellerContainer.innerHTML += `           
                  <div class="card  mb-3" onclick="productDetail(${element.id})"  style="max-width: 540px;">
                     <div class="row g-0">
                       <div class="col-md-4">
@@ -47,64 +45,14 @@ function displayProducts (data) {
 }
 
 function productDetail(id) {
-  
-  var product = items[1].data.find(element => element.id == id);
-  console.log(product);
+   localStorage.setItem("idDetail",id);
+   window.location.href = "box1.html";
 
-  var productContain = document.getElementById("product-info-new");
-  console.log(productContain);
-  product.forEach(element => {
-    productContain.innerHTML += `
-            
-    <!-- <div class="main-right p-3 col-12 col-lg-5 col-md-5">
-    <div class="img-box">
-      <img src="${element.img}" style="width: 100%" alt="" />
-    </div>
-  </div>
-  <div class="main-left p-3 col-12 col-lg-7 col-md-7">
-    <div class="name">
-      ${element.name}
-      <hr />
-    </div>
-
-    <div class="info">
-      Thương hiệu: Đông A | Loại: ${getNameCategories(element.categoryProduct)} | Mã SP:
-      8936203363302 |
-      <hr />
-    </div>
-    <div class="price">
-      ${element.price}
-      <hr />
-    </div>
-    <div class="phone">
-      Hotline hỗ trợ: 02438569367 |
-      <hr />
-    </div>
-    <div class="button-group">
-      <button type="button" class="btn">Mua ngay</button>
-      <button type="button" class="btn">Thêm vòa giỏ hàng</button>
-      <hr />
-    </div>
-    <div class="info-product">
-      Thông tin sản phẩm <br />
-      Thống khổ và phiêu linh <br />
-      Tác giả: Irving Stone <br />
-      Dịch giả: Nguyễn Minh <br />
-      Số trang: 980 Kích thước: 16 x 24 cm Mã <br />
-      ISBN: 978-604-394-346-7 <br />
-      Mã vạch: 8936203363302 <br>
-      Hình thức: bìa cứng, có bìa áo <br>
-       Giá bìa: 500.000đ <br>
-       Trọng lượng: 900gr <br>
-       Sách do Công ty Văn hóa Đông A và 
-      NXB Văn học liên kết xuất bản
-    </div>
-  </div>
-</div> -->         
-    `;
-  });
-  
-  window.location.href = "box1.html";
+}
+function productSearch() {
+  const input = document.getElementById("input-3").value ;
+  localStorage.setItem("inputSearch",input);
+  window.location.href = "box2.html";
 
 }
 

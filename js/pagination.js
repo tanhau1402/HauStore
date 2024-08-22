@@ -3,10 +3,11 @@ let currentPage = 1; // Current page number
 let totalPageCount = 1; // Total number of pages
 
 getAll(urlCategories, getAllCategories);
-
 function getAllCategories(data) {
     items[0].data = data ;
 }
+
+
 const  items = [
     {   
         id : 1,

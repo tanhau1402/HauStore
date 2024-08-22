@@ -20,16 +20,17 @@
   <header>
     <nav class="navbar navbar-top navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <form class="d-flex col-12 col-md-4 col-lg-4">
-          <input class="input-search form-control me-2" type="search" placeholder="Bạn tìm gì hôm nay ?"
+        <form class="d-flex col-12 col-md-4 col-lg-4 form-input">
+          <input id="input-3" class="input-search form-control me-2" type="search" placeholder="Bạn tìm gì hôm nay ?"
             aria-label="Search" />
+            <i onclick="productSearch()" class="icon-search fa-solid fa-magnifying-glass"></i>
         </form>
         <div class="logo col-12 col-md-4 col-lg-4 text-center">
           <img src="https://file.hstatic.net/200000863047/file/logo_nau_43e5331b983c463ea49137b2728fa4d1.png"
             style="width: 100px; height: 80px" alt="" />
         </div>
         <div class="nav-item col-12 col-md-4 col-lg-4 d-flex justify-content-end">
-         
+
           <div class="buy text-center">
             <i class="fa-solid fa-cart-shopping"></i>
             <p>Giỏ hàng</p>
@@ -42,7 +43,8 @@
       </div>
     </nav>
     <div class="text1 text-center">
-      <marquee behavior="" direction="">Chào mừng bạn đến với Đông A Books. Nếu bạn cần giúp đỡ hãy liên hệ với chúng tôi qua Hotline: 02839291285 hoặc Email: contact@sachdonga.vn</marquee>
+      <marquee behavior="" direction="">Chào mừng bạn đến với Đông A Books. Nếu bạn cần giúp đỡ hãy liên hệ với chúng
+        tôi qua Hotline: 02839291285 hoặc Email: contact@sachdonga.vn</marquee>
     </div>
     <div class="nav-bottom">
       <div class="row">
@@ -50,18 +52,21 @@
           <nav class="navbar nb1  navbar-expand-lg  ">
             <div class="container justify-content-end">
               <a class="navbar-brand visually-hidden" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-                <div class=" nav-main  collapse navbar-collapse" id="navbarSupportedContent">
+              <div class=" nav-main  collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav   ">
-                    <a class="nav-link all-content  " aria-current="page" href="#" >Trang chủ</a>
+                  <a class="nav-link all-content  " aria-current="page" href="#">Trang chủ</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="../views/box2.html">Tất cả sản phẩm</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
                       Danh mục sản phẩm
                     </a>
                     <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
@@ -71,7 +76,8 @@
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
                       Thể loại sách
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -84,7 +90,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">Hình thức thanh toán</a>
                   </li>
-                  
+
 
                 </ul>
                 <!-- <form class="d-flex">
@@ -93,19 +99,22 @@
                 </form> -->
               </div>
             </div>
-          </nav>  
+          </nav>
         </div>
       </div>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide-to="0" class="active button-btn" aria-current="true" aria-label="Slide 1">
-        VĂN HỌC KINH ĐIỂN
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active button-btn"
+          aria-current="true" aria-label="Slide 1">
+          VĂN HỌC KINH ĐIỂN
         </button>
-        <button type="button"  data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="button-btn" aria-label="Slide 2">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="button-btn"
+          aria-label="Slide 2">
           SÁCH MỚI ĐÔNG A
         </button>
-        <button type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide-to="2" class="button-btn" aria-label="Slide 3">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" class="button-btn"
+          aria-label="Slide 3">
           SÁCH GIỚI HẠN
         </button>
       </div>
@@ -120,211 +129,213 @@
           <img src="../img/banner3.webp" class="d-block w-100" alt="...">
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
   </header>
   <main>
-   <div class="box">
-    <div class="best-seller p-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-12 col-lg-7">
-            <div class="picture-class bg-body-tertiary rounded-4 p-2">
-              <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lnqnror327sdc6"
-                class="img-fluid rounded-4" alt="..." />
-              <!-- <img class="rounded-4" style="width: 700px; height: 400px;" src="https://file.hstatic.net/200000863047/file/artboard_1_large_3b02033399c340728087267f75235d0b.png" alt=""> -->
+    <div class="box">
+      <div class="best-seller p-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-7">
+              <div class="picture-class bg-body-tertiary rounded-4 p-2">
+                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lnqnror327sdc6"
+                  class="img-fluid rounded-4" alt="..." />
+                <!-- <img class="rounded-4" style="width: 700px; height: 400px;" src="https://file.hstatic.net/200000863047/file/artboard_1_large_3b02033399c340728087267f75235d0b.png" alt=""> -->
+              </div>
             </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-5 bg-body-tertiary rounded-4">
-            <div class="title-1">
-              <span class="title">Best-sellers</span>
-              <hr />
-            </div>
-            <div class="listSeller">
-              
+            <div class="col-12 col-md-12 col-lg-5 bg-body-tertiary rounded-4">
+              <div class="title-1">
+                <span class="title">Best-sellers</span>
+                <hr />
+              </div>
+              <div class="listSeller">
+
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="collection p-5 bg-body-tertiary container rounded-4">
-      <div class="container">
-        <div class="row">
-          <div class="title-2">
-            <span class="title-2-2"> Collection</span>
-            <hr />
-          </div>
-          <div class="collection-left col-12 col-md-12 col-lg-3 p-2">
-            <div class="d-grid gap-2">
-              <button type="button" class="btn btn-outline-secondary p-2">
-                Tất cả sản phẩm
-              </button>
-              <button type="button" class="btn btn-outline-secondary mt-1 p-2">
-                Sản phẩm nổi bật
-              </button>
-              <button type="button" class="btn btn-outline-secondary mt-1 p-2">
-                Sản phẩm giảm giá
-              </button>
+      <div class="collection p-5 bg-body-tertiary container rounded-4">
+        <div class="container">
+          <div class="row">
+            <div class="title-2">
+              <span class="title-2-2"> Collection</span>
+              <hr />
             </div>
-            <!-- <div class="img-box">
+            <div class="collection-left col-12 col-md-12 col-lg-3 p-2">
+              <div class="d-grid gap-2">
+                <button type="button" class="btn btn-outline-secondary p-2">
+                  Tất cả sản phẩm
+                </button>
+                <button type="button" class="btn btn-outline-secondary mt-1 p-2">
+                  Sản phẩm nổi bật
+                </button>
+                <button type="button" class="btn btn-outline-secondary mt-1 p-2">
+                  Sản phẩm giảm giá
+                </button>
+              </div>
+              <!-- <div class="img-box">
                                 <img class="d-block" src="https://my-live-01.slatic.net/p/23c3c421217b01a5c0515cd33cf3aca3.jpg" alt="">
                             </div> -->
-          </div>
-          <div class="collection-right col-12 col-md-12 col-lg-9 p-2">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <div class="card mb-3" style="">
-                    <div class="row g-0">
-                      <div class="col-md-4 p-4">
-                        <img
-                          src="https://product.hstatic.net/1000328521/product/thiet_ke_chua_co_ten_8c54e0c4b01e447e82ee79b1515f3bfc_master.jpg"
-                          class="img-fluid rounded-start" alt="..." />
-                      </div>
-                      <div class="products col-md-8 p-2">
-                        <div class="product-card card-body">
-                          <h5 class="card-title">
-                            THỐNG KHỔ VÀ PHIÊU LINH (SỐ LƯỢNG CÓ HẠN)
-                          </h5>
-                          <p class="card-info">
-                            Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
-                            SP: 8936203363302 |
-                          </p>
-                          <h5 class="price">400.000đ</h5>
-                          <p class="card-subtitle">
-                            Thông tin sản phẩm <br />
-                            Thống khổ và phiêu linh <br />
-                            Tác giả: Irving Stone <br />
-                            Dịch giả: Nguyễn Minh <br />
-                            Số trang: 980 <br />
-                            Kích thước: 16 x 24 cm <br />
-                          </p>
-
-                          <div class="button-group mt-5">
-                            <button type="button" class="btn btn-outline-secondary p-2">
-                              Thêm vào giỏ hàng
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary p-2 ms-3">
-                              Mua ngay
-                            </button>
-                          </div>
-                         
+            </div>
+            <div class="collection-right col-12 col-md-12 col-lg-9 p-2">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card mb-3" style="">
+                      <div class="row g-0">
+                        <div class="col-md-4 p-4">
+                          <img
+                            src="https://product.hstatic.net/1000328521/product/thiet_ke_chua_co_ten_8c54e0c4b01e447e82ee79b1515f3bfc_master.jpg"
+                            class="img-fluid rounded-start" alt="..." />
                         </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card mb-3" style="">
-                    <div class="row g-0">
-                      <div class="col-md-4 p-4">
-                        <img
-                          src="https://product.hstatic.net/1000328521/product/0_da_4a1c415bd3914ce99a1dee0de0be2de9_master.jpg"
-                          class="img-fluid rounded-start" alt="..." />
-                      </div>
-                      <div class="products col-md-8 p-2">
-                        <div class="product-card card-body">
-                          <h5 class="card-title">
-                            GIA ĐÌNH ROBONSON THỤY SĨ (BÌA VẢI)
-                          </h5>
-                          <p class="card-info">
-                            Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
-                            SP: 8936203364668 |
-                          </p>
-                          <h5 class="price">315,000₫</h5>
-                          <p class="card-subtitle">
-                            Thông tin ấn phẩm <br />
-                            Gia đình Robinson Thụy Sỹ <br />
-                            Tác giả: Johann David Wyss <br />
-                            Dịch giả: Nguyễn Minh <br />
-                            Kích thước: 13,5 x 20,5 cm <br />
-                            Số trang: 456 <br />
-                          </p>
+                        <div class="products col-md-8 p-2">
+                          <div class="product-card card-body">
+                            <h5 class="card-title">
+                              THỐNG KHỔ VÀ PHIÊU LINH (SỐ LƯỢNG CÓ HẠN)
+                            </h5>
+                            <p class="card-info">
+                              Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
+                              SP: 8936203363302 |
+                            </p>
+                            <h5 class="price">400.000đ</h5>
+                            <p class="card-subtitle">
+                              Thông tin sản phẩm <br />
+                              Thống khổ và phiêu linh <br />
+                              Tác giả: Irving Stone <br />
+                              Dịch giả: Nguyễn Minh <br />
+                              Số trang: 980 <br />
+                              Kích thước: 16 x 24 cm <br />
+                            </p>
 
-                          <div class="button-group mt-5">
-                            <button type="button" class="btn btn-outline-secondary p-2">
-                              Thêm vào giỏ hàng
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary p-2 ms-3">
-                              Mua ngay
-                            </button>
+                            <div class="button-group mt-5">
+                              <button type="button" class="btn btn-outline-secondary p-2">
+                                Thêm vào giỏ hàng
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary p-2 ms-3">
+                                Mua ngay
+                              </button>
+                            </div>
+
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card mb-3" style="">
-                    <div class="row g-0">
-                      <div class="col-md-4 p-4">
-                        <img
-                          src="https://product.hstatic.net/1000328521/product/1_da_a844834097414bc1bd81c8a5a27b4034_master.jpg"
-                          class="img-fluid rounded-start" alt="..." />
-                      </div>
-                      <div class="products col-md-8 p-2">
-                        <div class="product-card card-body">
-                          <h5 class="card-title">
-                            TRÊN SA MẠC VÀ TRONG RỪNG THẲM (BÌA VẢI)
-                          </h5>
-                          <p class="card-info">
-                            Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
-                            SP: 8936203363302 |
-                          </p>
-                          <h5 class="price">378,000₫</h5>
-                          <p class="card-subtitle">
-                            Thông tin sản phẩm <br />
-                            Trên sa mạc và trong rừng thẳm <br />
-                            Tác giả: Henryk Sienkiewicz <br />
-                            Dịch giả: Nguyễn Hữu Dũng <br />
-                            Minh họa: Đức Lâm <br />
-                            Kích thước: 13,5 x 20,5 cm
-                          </p>
+                  <div class="carousel-item">
+                    <div class="card mb-3" style="">
+                      <div class="row g-0">
+                        <div class="col-md-4 p-4">
+                          <img
+                            src="https://product.hstatic.net/1000328521/product/0_da_4a1c415bd3914ce99a1dee0de0be2de9_master.jpg"
+                            class="img-fluid rounded-start" alt="..." />
+                        </div>
+                        <div class="products col-md-8 p-2">
+                          <div class="product-card card-body">
+                            <h5 class="card-title">
+                              GIA ĐÌNH ROBONSON THỤY SĨ (BÌA VẢI)
+                            </h5>
+                            <p class="card-info">
+                              Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
+                              SP: 8936203364668 |
+                            </p>
+                            <h5 class="price">315,000₫</h5>
+                            <p class="card-subtitle">
+                              Thông tin ấn phẩm <br />
+                              Gia đình Robinson Thụy Sỹ <br />
+                              Tác giả: Johann David Wyss <br />
+                              Dịch giả: Nguyễn Minh <br />
+                              Kích thước: 13,5 x 20,5 cm <br />
+                              Số trang: 456 <br />
+                            </p>
 
-                          <div class="button-group mt-5">
-                            <button type="button" class="btn btn-outline-secondary p-2">
-                              Thêm vào giỏ hàng
-                            </button>
-                            <button type="button" class="btn btn-outline-secondary p-2 ms-3">
-                              Mua ngay
-                            </button>
+                            <div class="button-group mt-5">
+                              <button type="button" class="btn btn-outline-secondary p-2">
+                                Thêm vào giỏ hàng
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary p-2 ms-3">
+                                Mua ngay
+                              </button>
+                            </div>
                           </div>
-                         
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card mb-3" style="">
+                      <div class="row g-0">
+                        <div class="col-md-4 p-4">
+                          <img
+                            src="https://product.hstatic.net/1000328521/product/1_da_a844834097414bc1bd81c8a5a27b4034_master.jpg"
+                            class="img-fluid rounded-start" alt="..." />
+                        </div>
+                        <div class="products col-md-8 p-2">
+                          <div class="product-card card-body">
+                            <h5 class="card-title">
+                              TRÊN SA MẠC VÀ TRONG RỪNG THẲM (BÌA VẢI)
+                            </h5>
+                            <p class="card-info">
+                              Thương hiệu: Đông A | Loại: Sách tiếng Việt | Mã
+                              SP: 8936203363302 |
+                            </p>
+                            <h5 class="price">378,000₫</h5>
+                            <p class="card-subtitle">
+                              Thông tin sản phẩm <br />
+                              Trên sa mạc và trong rừng thẳm <br />
+                              Tác giả: Henryk Sienkiewicz <br />
+                              Dịch giả: Nguyễn Hữu Dũng <br />
+                              Minh họa: Đức Lâm <br />
+                              Kích thước: 13,5 x 20,5 cm
+                            </p>
+
+                            <div class="button-group mt-5">
+                              <button type="button" class="btn btn-outline-secondary p-2">
+                                Thêm vào giỏ hàng
+                              </button>
+                              <button type="button" class="btn btn-outline-secondary p-2 ms-3">
+                                Mua ngay
+                              </button>
+                            </div>
+
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="collection-2 p-5 bg-body-tertiary rounded-4 mt-5">
-      <div class="container" >
-        <div class="row">
-          <div class="title-2">
-            <span class="title-2-2">Collection</span>
-            <hr />
-          </div>
-          <div class="collection-content">
-            <div class="row listCollection row-cols-1 row-cols-md-2 row-cols-xl-4 ">
-              
+
             </div>
           </div>
         </div>
       </div>
+      <div class="collection-2 p-5 bg-body-tertiary rounded-4 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="title-2">
+              <span class="title-2-2">Collection</span>
+              <hr />
+            </div>
+            <div class="collection-content">
+              <div class="row listCollection row-cols-1 row-cols-md-2 row-cols-xl-4 ">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-   </div>
   </main>
   <footer>
     <div class="container">
@@ -401,10 +412,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
-    <script src="../js/api.js"></script>
-    <script src="../js/pagination.js"></script>
-    <script src="../js/home.js"></script>
-  </body>
+  <script src="../js/api.js"></script>
+  <script src="../js/pagination.js"></script>
+  <script src="../js/home.js"></script>
+  <script src="../js/box2.js"></script>
+  <script src="../js/searchFunction.js"></script>
+  <script src="../js/seach.js"></script>
+</body>
 
 
 </html>
